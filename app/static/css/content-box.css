@@ -1,0 +1,58 @@
+.content-box {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "HarmonyOS Sans Condensed Medium", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px; /* 设置字体间距，可以使用像素值或 em 等单位 */
+}
+
+.content-box > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px 15px 30px;
+    height: 35px;
+}
+
+.content-box > li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-content {
+    display: flex;
+    gap: 10px; /* 设置间距为30px */
+}
+
+.right-content > button {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.right-content > button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-content > .load-animation {
+    order: 1;
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+}
+
+.right-content > .start-btn,
+.right-content > .pause-btn {
+    order: 2;
+}
+
+.right-content > .close-btn {
+    order: 3;
+}
+
+.right-content > .more-btn {
+    order: 4;
+}

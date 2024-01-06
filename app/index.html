@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PyPhoneAutomate</title>
+    <base target="_blank" href="http://localhost:8001">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 CSS 文件 -->
+    <link rel="stylesheet" href="static/css/body.css">
+    <link rel="stylesheet" href="static/css/root-container.css">
+    <link rel="stylesheet" href="static/css/screen.css">
+    <link rel="stylesheet" href="static/css/right-side.css">
+    <link rel="stylesheet" href="static/css/content-box.css">
+    <link rel="stylesheet" href="static/css/load-circle.css">
+    <link rel="stylesheet" href="static/css/messages.css">
+</head>
+<body>
+<div class="root-container">
+    <div class="left-side">
+        <!-- 左侧内容 -->
+        <div class="screen-container">
+            <canvas id="screen"></canvas>
+            <div class="screen-menu">
+                <button class="screen-serve" id="screenButton" type="button">连接服务</button>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <!-- 右侧内容 -->
+        <div class="head"></div>
+        <ul class="content-box" id="content-box">
+            <!--            <li id="liblock_gamer"><p id="pblock_gamer">block gamer</p>-->
+            <!--                <div class="right-content">-->
+            <!--                    <button class="btn1" id="start-btnblock_gamer" style="display:none">-->
+            <!--                    </button>-->
+            <!--                    <button class="btn2" id="start-btnblock_gamer1" >-->
+            <!--                        <img src="/static/images/icons/play.svg" alt="Bootstrap">-->
+            <!--                    </button>-->
+            <!--                    <button class="btn3" id="more-btnblock_gamer">-->
+            <!--                        <img src="/static/images/icons/three-dots.svg" alt="Bootstrap">-->
+            <!--                    </button>-->
+            <!--                </div>-->
+            <!--            </li>-->
+            <!--            <li id="liblock_gamer1">-->
+            <!--                <p id="pblock_gamer1">block gamer</p>-->
+            <!--                <div class="right-content">-->
+            <!--                    <button class="btn2" id="start-btnblock_gamer111">-->
+            <!--                        <img src="/static/images/icons/play.svg" alt="Bootstrap">-->
+            <!--                    </button>-->
+            <!--                    <button class="btn3" id="more-btnblock_gamer1">-->
+            <!--                        <img src="/static/images/icons/three-dots.svg" alt="Bootstrap">-->
+            <!--                    </button>-->
+            <!--                </div>-->
+            <!--            </li>-->
+        </ul>
+    </div>
+</div>
+<div class="messages">
+    <div class="finish"></div>
+    <div class="wait"></div>
+</div>
+<!-- 引入 JavaScript 文件 -->
+<script type="text/javascript" src="static/js/libs/jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="static/js/libs/socket.io.js"></script>
+<script type="text/javascript" src="static/js/script.js"></script>
+</body>
+</html>

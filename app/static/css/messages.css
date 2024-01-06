@@ -1,0 +1,107 @@
+/* 全局消息样式 */
+.messages .msg {
+    margin: 0.8rem;
+    padding: 1rem;
+    background-color: #393b40;
+    color: #d5d7db;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    width: 195px;
+}
+
+/* 消息容器样式 */
+.messages {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* 等待消息和完成消息样式 */
+.messages > .wait,
+.messages > .finish {
+    margin: 0;
+    padding: 0;
+}
+
+/* 消息容器样式 */
+.msg {
+    margin: 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(1,0,0,1); /* 添加渐变效果 */
+    display: flex; /* 将.msg设置为弹性容器 */
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.messages > .wait > .msg {
+    transform: translateX(100%); /* 初始位置在右侧之外 */
+    animation: slideInRight 0.5s cubic-bezier(1,0,0,1) forwards; /* 添加动画效果，设置animation-fill-mode为forwards */
+}
+
+.messages > .finish > .msg {
+    animation: none; /* 移除动画 */
+    transform: none; /* 将 transform 重置为默认值 */
+}
+
+/* 消息图片样式 */
+.msg > .image {
+    width: 20px;
+    flex-shrink: 0; /* 防止图片被缩小 */
+}
+
+/* 消息内容样式 */
+.msg > .content {
+    flex: 1; /* 将左右两侧设置为弹性项，平均占据剩余空间 */
+    display: flex;
+    flex-direction: column; /* 设置垂直方向布局 */
+    margin-left: 10px; /* 为了在图片和文本之间增加一些间距，可以根据需要调整这个值 */
+}
+
+/* 消息图片样式 */
+.msg img {
+    width: 20px;
+    height: 100%; /* 图片高度充满父容器 */
+}
+
+/* 图片旋转动画样式 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.messages > .wait > .msg img {
+    animation: rotate 1s linear infinite; /* 设置动画，1秒一圈，线性变化，无限循环 */
+}
+
+.messages > .finish > .msg img {
+    animation: none; /* 移除动画 */
+    transform: none; /* 将 transform 重置为默认值 */
+}
+
+/* 消息标题样式 */
+.msg .title {
+    font-weight: bold;
+}
+
+/* 消息文本样式 */
+.msg .text {
+    font-size: 13px;
+}

@@ -1,0 +1,58 @@
+/* 包裹 screen 和按钮的容器 */
+.screen-container {
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 设置为 hidden，超出容器的内容会被隐藏 */
+    width: 324px;
+    height: 722px;
+}
+
+/* 菜单栏初始状态 */
+.screen-menu {
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    border-width: 0;
+    overflow: hidden; /* 设置为 hidden，超出容器的内容会被隐藏 */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* canvas 样式 */
+.screen {
+    border-radius: 5px;
+}
+
+/* 按钮样式 */
+.screen-serve {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: white;
+    background-color: transparent;
+    border-width: 0;
+    font-weight: normal; /* 初始状态为正常字重 */
+}
+
+/* canvas 悬停时，按钮的兄弟元素的动画效果 */
+.screen-container:hover .screen-menu {
+    /* 在这里添加悬停时的动画效果 */
+    opacity: 1;
+    top: 0; /* 结束状态：向下移动 30px */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 悬停失效时的样式 */
+.screen-menu {
+    top: -50px; /* 初始状态：顶部对齐 */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 按钮悬停时的样式 */
+.screen-serve:hover {
+    font-weight: bold; /* 悬停时改变为粗体字重 */
+}

@@ -1,0 +1,11 @@
+yolov5:
+  half_precision: False
+  device: 'cpu'
+  image_size: [ 640, 640 ]
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+  max_detections: 1000
+  class_labels: null
+  agnostic_nms: False
+  augment: False
+  visualize: False
